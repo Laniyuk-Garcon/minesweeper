@@ -18,10 +18,11 @@ document.addEventListener('DOMContentLoaded', startGame)
 
 function startGame () {
   cells = board.cells
-  //console.log(cells)
+  console.log(cells)
   for (var i = 0; i < cells.length; i++) {
     cell = cells[i]
-    countSurroundingMines(cell)
+    console.log(cell)
+    cell.surroundingMines = countSurroundingMines(cell)
   }
   // Don't remove this function call: it makes the game work!
   lib.initBoard()
